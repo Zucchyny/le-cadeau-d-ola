@@ -1,0 +1,88 @@
+@import 'scss/reset';
+@import 'scss/base';
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  overflow-x: auto; /* Empêche le défilement horizontal */
+  overflow-y: auto; /* Active le défilement vertical si nécessaire */
+
+  #toggleVerify {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken(#4CAF50, 10%);
+    }
+  }
+
+  .game-board {
+    width: 1500px;
+    height: 1500px;
+    border: 2px solid #333;
+    position: relative;
+    background-color: #ccc;
+    background-image:
+      linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px);
+    background-size: 100px 100px;
+    margin : 50px;
+
+    .tile {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+      cursor: move;
+      user-select: none;
+
+      &-front, &-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &-front {
+        background-size: cover;
+        transform: rotate3D(0,1,0,0deg);
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+      }
+
+      &-back {
+        background-size: cover;
+        transform: rotate3D(0,1,0,180deg);
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+      }
+    }
+
+    .revealed {
+      .tile-back {
+        transform: rotate3D(0,1,0,0deg);
+        transition: transform 0.5s;
+      }
+      .tile-front {
+        transform: rotate3D(0,1,0,-180deg);
+        transition: transform 0.5s;
+      }
+    }
+  }
+}

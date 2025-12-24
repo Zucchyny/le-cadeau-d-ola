@@ -1,0 +1,410 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="src/styles.scss"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.example.com">
+    <!-- Robots -->
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Device -->
+    <!-- <meta name="viwport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
+    <meta name="format-detection" content="telephone=no">
+    <!-- Title -->
+    <title>Le cadeau d'ola</title>
+    <!-- Description -->
+    <meta name="description" content="Home description.">
+    <!-- Favicon -->
+    <meta name="theme-color" content="#fff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <button id="toggleVerify">Vérifier</button>
+    <div class="game-board" id="board">
+        
+        <div class="tile" id="tile1" data-x="0" data-y="0">
+            <div class="tile-front" style="background-image: url('assets/img/recto1.png');"></div>
+            <div class="tile-back" style="background-image: url('assets/img/verso1.png');"></div>
+        </div>
+        <div class="tile" id="tile2" data-x="100" data-y="0">
+          <div class="tile-front" style="background-image: url('assets/img/recto2.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso2.png');"></div>
+        </div>
+        <div class="tile" id="tile3" data-x="200" data-y="0">
+          <div class="tile-front" style="background-image: url('assets/img/recto3.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso3.png');"></div>
+        </div>
+        <div class="tile" id="tile4" data-x="300" data-y="0">
+          <div class="tile-front" style="background-image: url('assets/img/recto4.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso4.png');"></div>
+        </div>
+        <div class="tile" id="tile5" data-x="400" data-y="0">
+          <div class="tile-front" style="background-image: url('assets/img/recto5.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso5.png');"></div>
+        </div>
+        <div class="tile" id="tile6" data-x="500" data-y="0">
+          <div class="tile-front" style="background-image: url('assets/img/recto6.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso6.png');"></div>
+        </div>
+        <div class="tile" id="tile7" data-x="600" data-y="0">
+          <div class="tile-front" style="background-image: url('assets/img/recto7.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso7.png');"></div>
+        </div>
+        <div class="tile" id="tile8" data-x="700" data-y="0">
+          <div class="tile-front" style="background-image: url('assets/img/recto8.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso8.png');"></div>
+        </div>
+        <div class="tile" id="tile9" data-x="800" data-y="0">
+          <div class="tile-front" style="background-image: url('assets/img/recto9.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso9.png');"></div>
+        </div>
+        <div class="tile" id="tile10" data-x="900" data-y="0">
+          <div class="tile-front" style="background-image: url('assets/img/recto10.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso10.png');"></div>
+        </div>
+        <div class="tile" id="tile11" data-x="1000" data-y="0">
+          <div class="tile-front" style="background-image: url('assets/img/recto11.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso11.png');"></div>
+        </div>
+    
+        
+        <div class="tile" id="tile12" data-x="0" data-y="100">
+          <div class="tile-front" style="background-image: url('assets/img/recto12.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso12.png');"></div>
+        </div>
+        <div class="tile" id="tile13" data-x="100" data-y="100">
+          <div class="tile-front" style="background-image: url('assets/img/recto13.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso13.png');"></div>
+        </div>
+        <div class="tile" id="tile14" data-x="200" data-y="100">
+          <div class="tile-front" style="background-image: url('assets/img/recto14.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso14.png');"></div>
+        </div>
+        <div class="tile" id="tile15" data-x="300" data-y="100">
+          <div class="tile-front" style="background-image: url('assets/img/recto15.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso15.png');"></div>
+        </div>
+        <div class="tile" id="tile16" data-x="400" data-y="100">
+          <div class="tile-front" style="background-image: url('assets/img/recto16.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso16.png');"></div>
+        </div>
+        <div class="tile" id="tile17" data-x="500" data-y="100">
+          <div class="tile-front" style="background-image: url('assets/img/recto17.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso17.png');"></div>
+        </div>
+        <div class="tile" id="tile18" data-x="600" data-y="100">
+          <div class="tile-front" style="background-image: url('assets/img/recto18.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso18.png');"></div>
+        </div>
+        <div class="tile" id="tile19" data-x="700" data-y="100">
+          <div class="tile-front" style="background-image: url('assets/img/recto19.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso19.png');"></div>
+        </div>
+        <div class="tile" id="tile20" data-x="800" data-y="100">
+          <div class="tile-front" style="background-image: url('assets/img/recto20.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso20.png');"></div>
+        </div>
+        <div class="tile" id="tile21" data-x="900" data-y="100">
+          <div class="tile-front" style="background-image: url('assets/img/recto21.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso21.png');"></div>
+        </div>
+        <div class="tile" id="tile22" data-x="1000" data-y="100">
+          <div class="tile-front" style="background-image: url('assets/img/recto22.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso22.png');"></div>
+        </div>
+    
+        
+        <div class="tile" id="tile23" data-x="0" data-y="200">
+          <div class="tile-front" style="background-image: url('assets/img/recto23.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso23.png');"></div>
+        </div>
+        <div class="tile" id="tile24" data-x="100" data-y="200">
+          <div class="tile-front" style="background-image: url('assets/img/recto24.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso24.png');"></div>
+        </div>
+        <div class="tile" id="tile25" data-x="200" data-y="200">
+          <div class="tile-front" style="background-image: url('assets/img/recto25.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso25.png');"></div>
+        </div>
+        <div class="tile" id="tile26" data-x="300" data-y="200">
+          <div class="tile-front" style="background-image: url('assets/img/recto26.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso26.png');"></div>
+        </div>
+        <div class="tile" id="tile27" data-x="400" data-y="200">
+          <div class="tile-front" style="background-image: url('assets/img/recto27.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso27.png');"></div>
+        </div>
+        <div class="tile" id="tile28" data-x="500" data-y="200">
+          <div class="tile-front" style="background-image: url('assets/img/recto28.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso28.png');"></div>
+        </div>
+        <div class="tile" id="tile29" data-x="600" data-y="200">
+          <div class="tile-front" style="background-image: url('assets/img/recto29.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso29.png');"></div>
+        </div>
+        <div class="tile" id="tile30" data-x="700" data-y="200">
+          <div class="tile-front" style="background-image: url('assets/img/recto30.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso30.png');"></div>
+        </div>
+        <div class="tile" id="tile31" data-x="800" data-y="200">
+          <div class="tile-front" style="background-image: url('assets/img/recto31.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso31.png');"></div>
+        </div>
+        <div class="tile" id="tile32" data-x="900" data-y="200">
+          <div class="tile-front" style="background-image: url('assets/img/recto32.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso32.png');"></div>
+        </div>
+        <div class="tile" id="tile33" data-x="1000" data-y="200">
+          <div class="tile-front" style="background-image: url('assets/img/recto33.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso33.png');"></div>
+        </div>
+    
+        
+        <div class="tile" id="tile34" data-x="0" data-y="300">
+          <div class="tile-front" style="background-image: url('assets/img/recto34.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso34.png');"></div>
+        </div>
+        <div class="tile" id="tile35" data-x="100" data-y="300">
+          <div class="tile-front" style="background-image: url('assets/img/recto35.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso35.png');"></div>
+        </div>
+        <div class="tile" id="tile36" data-x="200" data-y="300">
+          <div class="tile-front" style="background-image: url('assets/img/recto36.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso36.png');"></div>
+        </div>
+        <div class="tile" id="tile37" data-x="300" data-y="300">
+          <div class="tile-front" style="background-image: url('assets/img/recto37.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso37.png');"></div>
+        </div>
+        <div class="tile" id="tile38" data-x="400" data-y="300">
+          <div class="tile-front" style="background-image: url('assets/img/recto38.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso38.png');"></div>
+        </div>
+        <div class="tile" id="tile39" data-x="500" data-y="300">
+          <div class="tile-front" style="background-image: url('assets/img/recto39.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso39.png');"></div>
+        </div>
+        <div class="tile" id="tile40" data-x="600" data-y="300">
+          <div class="tile-front" style="background-image: url('assets/img/recto40.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso40.png');"></div>
+        </div>
+        <div class="tile" id="tile41" data-x="700" data-y="300">
+          <div class="tile-front" style="background-image: url('assets/img/recto41.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso41.png');"></div>
+        </div>
+        <div class="tile" id="tile42" data-x="800" data-y="300">
+          <div class="tile-front" style="background-image: url('assets/img/recto42.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso42.png');"></div>
+        </div>
+        <div class="tile" id="tile43" data-x="900" data-y="300">
+          <div class="tile-front" style="background-image: url('assets/img/recto43.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso43.png');"></div>
+        </div>
+        <div class="tile" id="tile44" data-x="1000" data-y="300">
+          <div class="tile-front" style="background-image: url('assets/img/recto44.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso44.png');"></div>
+        </div>
+    
+        
+        <div class="tile" id="tile45" data-x="0" data-y="400">
+          <div class="tile-front" style="background-image: url('assets/img/recto45.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso45.png');"></div>
+        </div>
+        <div class="tile" id="tile46" data-x="100" data-y="400">
+          <div class="tile-front" style="background-image: url('assets/img/recto46.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso46.png');"></div>
+        </div>
+        <div class="tile" id="tile47" data-x="200" data-y="400">
+          <div class="tile-front" style="background-image: url('assets/img/recto47.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso47.png');"></div>
+        </div>
+        <div class="tile" id="tile48" data-x="300" data-y="400">
+          <div class="tile-front" style="background-image: url('assets/img/recto48.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso48.png');"></div>
+        </div>
+        <div class="tile" id="tile49" data-x="400" data-y="400">
+          <div class="tile-front" style="background-image: url('assets/img/recto49.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso49.png');"></div>
+        </div>
+        <div class="tile" id="tile50" data-x="500" data-y="400">
+          <div class="tile-front" style="background-image: url('assets/img/recto50.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso50.png');"></div>
+        </div>
+        <div class="tile" id="tile51" data-x="600" data-y="400">
+          <div class="tile-front" style="background-image: url('assets/img/recto51.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso51.png');"></div>
+        </div>
+        <div class="tile" id="tile52" data-x="700" data-y="400">
+          <div class="tile-front" style="background-image: url('assets/img/recto52.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso52.png');"></div>
+        </div>
+        <div class="tile" id="tile53" data-x="800" data-y="400">
+          <div class="tile-front" style="background-image: url('assets/img/recto53.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso53.png');"></div>
+        </div>
+        <div class="tile" id="tile54" data-x="900" data-y="400">
+          <div class="tile-front" style="background-image: url('assets/img/recto54.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso54.png');"></div>
+        </div>
+        <div class="tile" id="tile55" data-x="1000" data-y="400">
+          <div class="tile-front" style="background-image: url('assets/img/recto55.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso55.png');"></div>
+        </div>
+    
+        
+        <div class="tile" id="tile56" data-x="0" data-y="500">
+          <div class="tile-front" style="background-image: url('assets/img/recto56.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso56.png');"></div>
+        </div>
+        <div class="tile" id="tile57" data-x="100" data-y="500">
+          <div class="tile-front" style="background-image: url('assets/img/recto57.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso57.png');"></div>
+        </div>
+        <div class="tile" id="tile58" data-x="200" data-y="500">
+          <div class="tile-front" style="background-image: url('assets/img/recto58.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso58.png');"></div>
+        </div>
+        <div class="tile" id="tile59" data-x="300" data-y="500">
+          <div class="tile-front" style="background-image: url('assets/img/recto59.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso59.png');"></div>
+        </div>
+        <div class="tile" id="tile60" data-x="400" data-y="500">
+          <div class="tile-front" style="background-image: url('assets/img/recto60.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso60.png');"></div>
+        </div>
+        <div class="tile" id="tile61" data-x="500" data-y="500">
+          <div class="tile-front" style="background-image: url('assets/img/recto61.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso61.png');"></div>
+        </div>
+        <div class="tile" id="tile62" data-x="600" data-y="500">
+          <div class="tile-front" style="background-image: url('assets/img/recto62.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso62.png');"></div>
+        </div>
+        <div class="tile" id="tile63" data-x="700" data-y="500">
+          <div class="tile-front" style="background-image: url('assets/img/recto63.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso63.png');"></div>
+        </div>
+        <div class="tile" id="tile64" data-x="800" data-y="500">
+          <div class="tile-front" style="background-image: url('assets/img/recto64.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso64.png');"></div>
+        </div>
+        <div class="tile" id="tile65" data-x="900" data-y="500">
+          <div class="tile-front" style="background-image: url('assets/img/recto65.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso65.png');"></div>
+        </div>
+        <div class="tile" id="tile66" data-x="1000" data-y="500">
+          <div class="tile-front" style="background-image: url('assets/img/recto66.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso66.png');"></div>
+        </div>
+    
+        
+        <div class="tile" id="tile67" data-x="0" data-y="600">
+          <div class="tile-front" style="background-image: url('assets/img/recto67.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso67.png');"></div>
+        </div>
+        <div class="tile" id="tile68" data-x="100" data-y="600">
+          <div class="tile-front" style="background-image: url('assets/img/recto68.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso68.png');"></div>
+        </div>
+        <div class="tile" id="tile69" data-x="200" data-y="600">
+          <div class="tile-front" style="background-image: url('assets/img/recto69.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso69.png');"></div>
+        </div>
+        <div class="tile" id="tile70" data-x="300" data-y="600">
+          <div class="tile-front" style="background-image: url('assets/img/recto70.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso70.png');"></div>
+        </div>
+        <div class="tile" id="tile71" data-x="400" data-y="600">
+          <div class="tile-front" style="background-image: url('assets/img/recto71.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso71.png');"></div>
+        </div>
+        <div class="tile" id="tile72" data-x="500" data-y="600">
+          <div class="tile-front" style="background-image: url('assets/img/recto72.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso72.png');"></div>
+        </div>
+        <div class="tile" id="tile73" data-x="600" data-y="600">
+          <div class="tile-front" style="background-image: url('assets/img/recto73.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso73.png');"></div>
+        </div>
+        <div class="tile" id="tile74" data-x="700" data-y="600">
+          <div class="tile-front" style="background-image: url('assets/img/recto74.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso74.png');"></div>
+        </div>
+        <div class="tile" id="tile75" data-x="800" data-y="600">
+          <div class="tile-front" style="background-image: url('assets/img/recto75.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso75.png');"></div>
+        </div>
+        <div class="tile" id="tile76" data-x="900" data-y="600">
+          <div class="tile-front" style="background-image: url('assets/img/recto76.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso76.png');"></div>
+        </div>
+        <div class="tile" id="tile77" data-x="1000" data-y="600">
+          <div class="tile-front" style="background-image: url('assets/img/recto77.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso77.png');"></div>
+        </div>
+    
+        
+        <div class="tile" id="tile78" data-x="0" data-y="700">
+          <div class="tile-front" style="background-image: url('assets/img/recto78.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso78.png');"></div>
+        </div>
+        <div class="tile" id="tile79" data-x="100" data-y="700">
+          <div class="tile-front" style="background-image: url('assets/img/recto79.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso79.png');"></div>
+        </div>
+        <div class="tile" id="tile80" data-x="200" data-y="700">
+          <div class="tile-front" style="background-image: url('assets/img/recto80.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso80.png');"></div>
+        </div>
+        <div class="tile" id="tile81" data-x="300" data-y="700">
+          <div class="tile-front" style="background-image: url('assets/img/recto81.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso81.png');"></div>
+        </div>
+        <div class="tile" id="tile82" data-x="400" data-y="700">
+          <div class="tile-front" style="background-image: url('assets/img/recto82.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso82.png');"></div>
+        </div>
+        <div class="tile" id="tile83" data-x="500" data-y="700">
+          <div class="tile-front" style="background-image: url('assets/img/recto83.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso83.png');"></div>
+        </div>
+        <div class="tile" id="tile84" data-x="600" data-y="700">
+          <div class="tile-front" style="background-image: url('assets/img/recto84.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso84.png');"></div>
+        </div>
+        <div class="tile" id="tile85" data-x="700" data-y="700">
+          <div class="tile-front" style="background-image: url('assets/img/recto85.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso85.png');"></div>
+        </div>
+        <div class="tile" id="tile86" data-x="800" data-y="700">
+          <div class="tile-front" style="background-image: url('assets/img/recto86.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso86.png');"></div>
+        </div>
+        <div class="tile" id="tile87" data-x="900" data-y="700">
+          <div class="tile-front" style="background-image: url('assets/img/recto87.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso87.png');"></div>
+        </div>
+        <div class="tile" id="tile88" data-x="1000" data-y="700">
+          <div class="tile-front" style="background-image: url('assets/img/recto88.png');"></div>
+          <div class="tile-back" style="background-image: url('assets/img/verso88.png');"></div>
+        </div>
+      </div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="src/addons.js"></script>
+  </body>
+
+
+<script>
+    // État du toggle
+let isRevealed = false;
+</script>
+
+</html>
