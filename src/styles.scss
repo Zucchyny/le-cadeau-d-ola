@@ -49,7 +49,7 @@ body {
       cursor: move;
       user-select: none;
 
-      &-front, &-back {
+      .tile-front {
         width: 100px;
         height: 100px;
         position: absolute;
@@ -57,16 +57,20 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-      }
-
-      &-front {
         background-size: cover;
         transform: rotate3D(0,1,0,0deg);
         transition: transform 0.5s;
         transform-style: preserve-3d;
       }
 
-      &-back {
+      .tile-back {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-size: cover;
         transform: rotate3D(0,1,0,180deg);
         transition: transform 0.5s;
